@@ -6,7 +6,7 @@ def parse_input(user_input): #робимо функцію обробки ком�
 
 def add_contact(args, contacts): #ця функція додає контакт в словник
     name, phone = args
-    contacts[name] = phone
+    contacts[name.lower()] = phone
     return "Contact added."
 
 
@@ -34,7 +34,7 @@ def show_contact(args, contacts): #ця функція показує конта
 
 def show_all(args, contacts): #ця функція показує всю інформацію про користувачів які збережені у словник контакти,тобто ім'я та номер
     for name, phone in args:
-        contacts[name] = phone
+        contacts[name.lower()] = phone
 
     return contacts
 
