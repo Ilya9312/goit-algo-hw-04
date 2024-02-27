@@ -5,8 +5,7 @@ def get_cats_info(path):
             cats_info = []  # записую сюди сформованний список словників з котами
             # прохожусь циклом по усім котам,та додаю у список cats_info словники з котами по айді та за ім'ям і віком,розділюючи їх по комі
             for cats in fh:
-                cat_id, name, age = cats.split(',')
-                age = int(age)
+                cat_id, name, age = cats.strip().split(',')
                 cats_info += ([{"id": cat_id, "name": name, "age": age, }])
             return cats_info  # повертаю відсортованний список словників за вказанними в задачі потребами
 
